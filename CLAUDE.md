@@ -3,11 +3,11 @@
 This document explains the Vibecraft codebase for future AI assistants working on this project.
 
 > 📚 **Related Documentation:**
-> - [README](../README.md) - Project overview and quick start
+> - [README](README.md) - Project overview and quick start
 > - [Setup Guide](docs/SETUP.md) - Installation instructions
 > - [API Reference](docs/API.md) - REST endpoints
 > - [Development Guide](docs/DEVELOPMENT.md) - Development workflow
-> - [Contributing](../CONTRIBUTING.md) - Contribution guidelines
+> - [Contributing](CONTRIBUTING.md) - Contribution guidelines
 
 ## Project Purpose
 
