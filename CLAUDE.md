@@ -2,6 +2,13 @@
 
 This document explains the Vibecraft codebase for future AI assistants working on this project.
 
+> 📚 **Related Documentation:**
+> - [README](../README.md) - Project overview and quick start
+> - [Setup Guide](docs/SETUP.md) - Installation instructions
+> - [API Reference](docs/API.md) - REST endpoints
+> - [Development Guide](docs/DEVELOPMENT.md) - Development workflow
+> - [Contributing](../CONTRIBUTING.md) - Contribution guidelines
+
 ## Project Purpose
 
 Vibecraft visualizes Claude Code's activity in real-time as a 3D workshop. When Claude uses tools (Read, Edit, Bash, etc.), a character moves to corresponding workstations in a Three.js scene. The user can also send prompts to Claude from the browser via tmux integration.

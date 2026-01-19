@@ -12,7 +12,11 @@ Manage Claude Code in style!
 
 Vibecraft uses your own local Claude Code instances — no files or prompts are shared.
 
-![Three.js](https://img.shields.io/badge/Three.js-black?logo=threedotjs) ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white) ![npm](https://img.shields.io/npm/v/vibecraft)
+[![npm version](https://img.shields.io/npm/v/vibecraft)](https://www.npmjs.com/package/vibecraft)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Three.js](https://img.shields.io/badge/Three.js-black?logo=threedotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=nodedotjs)
 
 ## Requirements
 
@@ -110,10 +114,14 @@ See [docs/ORCHESTRATION.md](docs/ORCHESTRATION.md) for the full API and architec
 | `1-6` | Switch to session (extended: QWERTY, ASDFGH, ZXCVBN) |
 | `0` / `` ` `` | All sessions / overview |
 | `Alt+N` | New session |
+| `Alt+A` | Go to next session needing attention |
+| `Alt+Space` | Expand most recent "show more" in feed |
 | `Alt+R` | Toggle voice input |
+| `Alt+D` | Toggle dev panel |
 | `F` | Toggle follow mode |
 | `P` | Toggle station panels |
 | `D` | Toggle draw mode |
+| `Ctrl+C` | Context-aware: copy or interrupt |
 
 **Draw mode:** `1-6` colors, `0` eraser, `Q/E` brush size, `R` 3D stack, `X` clear
 
@@ -128,11 +136,40 @@ Options:
   --version, -v        Show version
 ```
 
-See [docs/SETUP.md](docs/SETUP.md) for detailed setup guide.
-See [CLAUDE.md](CLAUDE.md) for technical documentation.
+## Documentation
 
-Website: https://vibecraft.sh
+| Document | Description |
+|----------|-------------|
+| [Quick Start](docs/QUICKSTART.md) | TL;DR - Get started in 3 commands |
+| [Setup Guide](docs/SETUP.md) | Detailed installation and configuration |
+| [Orchestration](docs/ORCHESTRATION.md) | Multi-session management |
+| [API Reference](docs/API.md) | Complete REST API documentation |
+| [Sound System](docs/SOUND.md) | Audio architecture and spatial audio |
+| [Storage](docs/STORAGE.md) | Data persistence and localStorage |
+| [Design Principles](docs/DESIGN.md) | UI/UX guidelines |
+| [Development](docs/DEVELOPMENT.md) | Development environment setup |
+| [Contributing](CONTRIBUTING.md) | How to contribute |
+| [Technical Docs](CLAUDE.md) | Architecture for AI assistants |
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+- 🐛 [Report bugs](https://github.com/nearcyan/vibecraft/issues)
+- 💡 [Request features](https://github.com/nearcyan/vibecraft/issues)
+- 📖 [Improve docs](https://github.com/nearcyan/vibecraft/pulls)
+- 🎨 [Submit PRs](https://github.com/nearcyan/vibecraft/pulls)
+
+## Community
+
+- **Website:** https://vibecraft.sh
+- **GitHub:** https://github.com/nearcyan/vibecraft
+- **Issues:** https://github.com/nearcyan/vibecraft/issues
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for security policy and vulnerability reporting.
 
 ## License
 
-MIT
+[MIT](LICENSE) © 2025 nearcyan
