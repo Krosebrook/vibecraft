@@ -142,6 +142,7 @@ Options:
 |----------|-------------|
 | [Quick Start](docs/QUICKSTART.md) | TL;DR - Get started in 3 commands |
 | [Setup Guide](docs/SETUP.md) | Detailed installation and configuration |
+| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common issues and solutions |
 | [Orchestration](docs/ORCHESTRATION.md) | Multi-session management |
 | [API Reference](docs/API.md) | Complete REST API documentation |
 | [Sound System](docs/SOUND.md) | Audio architecture and spatial audio |
