@@ -1,56 +1,68 @@
 # Vibecraft Feature Specifications
 
-This directory contains detailed technical specifications for all planned Vibecraft features.
+**20 feature specs** for Vibecraft v1.1.0 → v2.0.0
 
-## Specification Template
+See also: [Feature Roadmap](../docs/FEATURE_ROADMAP.md) | [Implementation Guide](../docs/IMPLEMENTATION_GUIDE.md)
 
-Each spec follows this structure:
+---
+
+## 📋 Spec Format
+
+All specs follow this structure:
 1. **Executive Summary** - High-level overview
-2. **Problem Statement** - User pain points and stories
+2. **Problem Statement** - User pain points, stories
 3. **Technical Design** - Architecture, data models, APIs
-4. **User Interface** - Mockups and interaction flows
-5. **Implementation Plan** - Phased tasks and deliverables
+4. **User Interface** - Mockups and flows
+5. **Implementation Plan** - Phased tasks
 6. **Success Metrics** - Measurable outcomes
-7. **Dependencies** - Internal and external requirements
-8. **Testing Strategy** - Unit, integration, E2E tests
+7. **Dependencies** - Requirements
+8. **Testing Strategy** - Test approach
 
-## Priority Levels
-
-- **HIGH** - Critical for next release, full detailed spec
-- **MEDIUM** - Important but flexible, moderate detail
+**Priority Levels:**
+- **HIGH** - Critical, full detailed spec
+- **MEDIUM** - Important, moderate detail
 - **LOW** - Nice-to-have, brief spec
 
-## Completed Specifications
+---
 
-### Phase 1: Intelligence & Insights
-- [✅ 01-session-replay.md](01-session-replay.md) - **HIGH** - Session recording and playback
-- [✅ 02-code-intelligence.md](02-code-intelligence.md) - **HIGH** - Static analysis and insights
-- [📝 03-pattern-recognition.md](03-pattern-recognition.md) - **MEDIUM** - ML-powered pattern detection
-- [📝 04-smart-notifications.md](04-smart-notifications.md) - **MEDIUM** - Context-aware alerts
+## 📚 Specifications
 
-### Phase 2: Collaboration 2.0
-- [📝 05-realtime-collab.md](05-realtime-collab.md) - **HIGH** - Real-time co-editing
-- [📝 06-session-branching.md](06-session-branching.md) - **MEDIUM** - Git-like session branching
-- [📝 07-team-spaces.md](07-team-spaces.md) - **HIGH** - Shared workspaces
-- [📝 08-code-review.md](08-code-review.md) - **MEDIUM** - Inline code review
+### Full Specs (2/20)
+| # | Feature | Priority | Effort | Status | Spec |
+|---|---------|----------|--------|--------|------|
+| 01 | Session Replay | ⚡ HIGH | 3w | ✅ Complete | [01-session-replay.md](01-session-replay.md) |
+| 02 | Code Intelligence | ⚡ HIGH | 4w | ✅ Complete | [02-code-intelligence.md](02-code-intelligence.md) |
 
-### Phase 3: Developer Experience
-- [📝 09-plugin-system.md](09-plugin-system.md) - **HIGH** - Extensible plugin architecture
-- [📝 10-custom-stations.md](10-custom-stations.md) - **MEDIUM** - User-defined stations
-- [📝 11-macro-system.md](11-macro-system.md) - **MEDIUM** - Prompt automation
-- [📝 12-ide-integration.md](12-ide-integration.md) - **HIGH** - Deep IDE integration
+### Summary Specs (18/20)
+All remaining features documented in [SPECS_SUMMARY.md](SPECS_SUMMARY.md)
 
-### Phase 4: Advanced Visualization
-- [📝 13-vr-workshop.md](13-vr-workshop.md) - **LOW** - VR/AR experience
-- [📝 14-dynamic-environment.md](14-dynamic-environment.md) - **MEDIUM** - Adaptive environments
-- [📝 15-filesystem-viz.md](15-filesystem-viz.md) - **MEDIUM** - 3D file system visualization
-- [📝 16-network-graph.md](16-network-graph.md) - **MEDIUM** - Dependency graph visualization
+**Phase 1: Intelligence**
+- 03: Pattern Recognition (MEDIUM, 3w)
+- 04: Smart Notifications (MEDIUM, 2w)
 
-### Phase 5: Enterprise & Scale
-- [📝 17-analytics-dashboard.md](17-analytics-dashboard.md) - **HIGH** - Advanced analytics
-- [📝 18-enterprise-auth.md](18-enterprise-auth.md) - **HIGH** - SSO and RBAC
-- [📝 19-self-hosted.md](19-self-hosted.md) - **MEDIUM** - On-premise deployment
-- [📝 20-agent-orchestration.md](20-agent-orchestration.md) - **HIGH** - Multi-agent coordination
+**Phase 2: Collaboration**
+- 05: Real-time Collab (HIGH, 4w)
+- 06: Session Branching (MEDIUM, 3w)
+- 07: Team Spaces (HIGH, 3w)
+- 08: Code Review (MEDIUM, 2w)
+
+**Phase 3: Dev Experience**
+- 09: Plugin System (HIGH, 5w)
+- 10: Custom Stations (MEDIUM, 3w)
+- 11: Macro System (MEDIUM, 2w)
+- 12: IDE Integration (HIGH, 4w)
+
+**Phase 4: Visualization**
+- 13: VR/AR Workshop (LOW, 6w)
+- 14: Dynamic Environment (MEDIUM, 3w)
+- 15: FileSystem Viz (MEDIUM, 4w)
+- 16: Network Graph (MEDIUM, 3w)
+
+**Phase 5: Enterprise**
+- 17: Analytics Dashboard (HIGH, 4w)
+- 18: Enterprise SSO (HIGH, 3w)
+- 19: Self-Hosted (MEDIUM, 4w)
+- 20: Agent Orchestration (HIGH, 5w)
 
 ## Specification Status
 

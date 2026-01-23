@@ -1,15 +1,17 @@
-# Vibecraft Feature Roadmap: Next 20 Features
+# Vibecraft Feature Roadmap: v1.0 → v2.0
 
-Detailed phased roadmap with 20 groundbreaking features to establish Vibecraft as the premier Claude Code visualization and collaboration platform.
+**Timeline:** 16-24 months | **Features:** 20 | **Investment:** ~70 engineer-weeks
 
-## Overview
+This roadmap extends the [MVP Roadmap](MVP_ROADMAP.md) (v0.1 → v1.0) with 20 features that differentiate Vibecraft and enable enterprise scale.
 
-This roadmap extends beyond v1.0.0 to v2.0.0, introducing features that:
-- **Differentiate** Vibecraft from other developer tools
-- **Enhance** collaboration and team productivity
-- **Leverage** AI for intelligent insights
-- **Scale** to enterprise needs
-- **Integrate** deeply with development workflows
+## Quick Links
+- [Phase 1: Intelligence](#phase-1-intelligence--insights-v110---v120) (4 features)
+- [Phase 2: Collaboration](#phase-2-collaboration-20-v130---v140) (4 features)
+- [Phase 3: Dev Experience](#phase-3-developer-experience-v150---v160) (4 features)
+- [Phase 4: Visualization](#phase-4-advanced-visualization-v170---v180) (4 features)
+- [Phase 5: Enterprise](#phase-5-enterprise--scale-v190---v200) (4 features)
+- [Feature Matrix](#feature-comparison-matrix)
+- [Revenue Impact](#revenue-impact-analysis)
 
 ---
 
