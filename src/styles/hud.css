@@ -746,3 +746,216 @@
     transform: translateY(-10px) scale(0.95);
   }
 }
+
+/* ============================================================================
+   Replay Controls
+   ============================================================================ */
+
+.replay-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1500;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.replay-controls.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.replay-controls-inner {
+  background: rgba(20, 20, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 16px 20px;
+  min-width: 480px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.replay-controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.replay-controls-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.replay-controls-close {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.replay-controls-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.replay-controls-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.replay-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.replay-slider {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+.replay-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #a78bfa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.replay-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.replay-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #a78bfa;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.replay-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.replay-time-sep {
+  margin: 0 4px;
+}
+
+.replay-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.replay-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.replay-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.replay-btn.hidden {
+  display: none;
+}
+
+.replay-speed {
+  margin-left: auto;
+}
+
+.replay-btn-speed {
+  font-family: monospace;
+  font-weight: 600;
+  color: #22d3ee;
+}
+
+.replay-recording {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+}
+
+.replay-recording.hidden {
+  display: none;
+}
+
+.replay-recording-dot {
+  width: 10px;
+  height: 10px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: replay-recording-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes replay-recording-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+.replay-recording-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ef4444;
+  flex: 1;
+}
+
+.replay-btn-stop-recording {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+.replay-btn-stop-recording:hover {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.6);
+}

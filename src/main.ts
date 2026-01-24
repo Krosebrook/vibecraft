@@ -59,6 +59,8 @@ import { setupDirectoryAutocomplete } from './ui/DirectoryAutocomplete'
 import { checkForUpdates } from './ui/VersionChecker'
 import { drawMode } from './ui/DrawMode'
 import { setupTextLabelModal, showTextLabelModal } from './ui/TextLabelModal'
+import { shortcutsHelp } from './ui/ShortcutsHelp'
+import { onboardingWizard } from './ui/OnboardingWizard'
 import { createSessionAPI, type SessionAPI } from './api'
 
 // ============================================================================
@@ -2430,6 +2432,14 @@ function setupSettingsModal(): void {
     closeModal()
   })
 
+  // Restart tutorial button
+  const restartTutorialBtn = document.getElementById('settings-restart-tutorial')
+  restartTutorialBtn?.addEventListener('click', () => {
+    closeModal()
+    onboardingWizard.reset()
+    onboardingWizard.start()
+  })
+
   // Escape to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('visible')) {
@@ -3017,6 +3027,13 @@ function init() {
 
   // Check for updates (non-blocking)
   checkForUpdates()
+
+  // Show onboarding wizard for first-time users (after short delay to let UI settle)
+  setTimeout(() => {
+    if (onboardingWizard.shouldShow()) {
+      onboardingWizard.start()
+    }
+  }, 1000)
 
   console.log('Vibecraft initialized (multi-session enabled)')
 }

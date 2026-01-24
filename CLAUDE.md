@@ -801,12 +801,161 @@ npx vibecraft
 - **Server**: Compiled by `tsc -p tsconfig.server.json`, output to `dist/server/`
 - **CLI**: Checks for compiled JS first, falls back to tsx for development
 
+## Keyboard Shortcuts Help
+
+**File:** `src/ui/ShortcutsHelp.ts`
+
+A visual overlay showing all keyboard shortcuts, triggered by pressing `?`.
+
+```typescript
+import { shortcutsHelp } from './ui/ShortcutsHelp'
+
+// The shortcuts help is automatically available
+// User presses '?' (Shift+/) to toggle
+```
+
+**Features:**
+- Categorized shortcuts (Navigation, Session Management, Visual Tools, etc.)
+- Dynamically reads keybinds from `KeybindConfig`
+- Responsive grid layout
+- Close with `Esc` or click close button
+
+## Onboarding Wizard
+
+**File:** `src/ui/OnboardingWizard.ts`
+
+An interactive tutorial system that guides new users through Vibecraft's features.
+
+```typescript
+import { onboardingWizard } from './ui/OnboardingWizard'
+
+// Check if user should see onboarding
+if (onboardingWizard.shouldShow()) {
+  onboardingWizard.start()
+}
+
+// Restart tutorial from settings
+onboardingWizard.reset()
+onboardingWizard.start()
+```
+
+**Features:**
+- 8-step guided tour
+- Progress bar and step counter
+- Element highlighting with pulsing border
+- Skippable or can complete all steps
+- localStorage persistence (shown once per version)
+
+**Steps:**
+1. Welcome to Vibecraft
+2. The Workshop (3D scene controls)
+3. Session Management panel
+4. Activity Feed panel
+5. Prompt Input
+6. Keyboard Shortcuts
+7. Advanced Features
+8. Ready to Go
+
+**Restart from Settings:**
+A "Restart Tutorial" button is available in the Settings modal under the Help section.
+
+## Session Replay System
+
+**Files:** `src/features/replay/`
+
+A complete system for recording and playing back Claude sessions.
+
+### Database Schema
+
+**Tables:**
+- `replays` - Stores replay metadata (name, duration, event count)
+- `replay_events` - Stores individual events with timestamps
+
+**Features:**
+- RLS enabled for all tables
+- Users can only access their own replays
+- Indexed for performance
+
+### ReplayRecorder
+
+Records events as they happen:
+
+```typescript
+import { ReplayRecorder } from './features/replay'
+
+const recorder = new ReplayRecorder()
+
+// Start recording
+recorder.start(sessionId, {
+  cwd: '/path/to/project',
+  flags: { continue: true },
+})
+
+// Record events
+recorder.recordEvent(event)
+
+// Stop and save
+const replay = await recorder.save('My Session', 'Description')
+```
+
+### ReplayPlayer
+
+Plays back recorded sessions:
+
+```typescript
+import { ReplayPlayer } from './features/replay'
+
+const player = new ReplayPlayer()
+
+// Load replay
+player.load(recording)
+
+// Set event callback
+player.onEvent((event, offsetMs) => {
+  // Handle event playback
+})
+
+// Control playback
+player.play()
+player.pause()
+player.stop()
+player.seek(timeMs)
+player.setSpeed(1.5) // 0.25, 0.5, 1, 1.5, 2, 4
+```
+
+### ReplayControls
+
+VCR-like UI for playback:
+
+```typescript
+import { replayControls } from './features/replay'
+
+// Show controls
+replayControls.setPlayer(player)
+replayControls.show()
+
+// For recording
+replayControls.setRecorder(recorder)
+replayControls.showRecording()
+```
+
+**UI Features:**
+- Play/Pause/Stop buttons
+- Seekable timeline slider
+- Current time / total time display
+- Playback speed selector (0.25x - 4x)
+- Recording indicator with stop button
+
 ## Future Work
 
 - [x] **Subagent visualization**: Mini-Claudes spawn at portal for Task tools
 - [x] **Floating context labels**: Show file paths above stations
 - [x] **Response capture**: Show Claude's responses in activity feed
 - [x] **Sound effects**: Synthesized audio via Tone.js (see Sound System section)
-- [ ] **Session replay**: Replay events from events.jsonl
+- [x] **Keyboard shortcuts help**: Visual overlay with categorized shortcuts
+- [x] **Onboarding wizard**: Interactive tutorial for new users
+- [x] **Session replay system**: Record and playback Claude sessions
+- [ ] **Replay integration**: Connect replay system to main UI
+- [ ] **Replay library**: Browse and manage saved replays
 - [ ] **File system map**: 3D visualization of touched files
 - [ ] **VR support**: WebXR for immersive view
